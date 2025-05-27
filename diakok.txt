@@ -1,0 +1,5 @@
+ID;TARGY;JEGY;BUKAS
+101;nemet;5;False
+102;matek;3;False
+103;nemet;1;True
+103;magyar;2;False

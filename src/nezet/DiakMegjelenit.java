@@ -198,7 +198,17 @@ public class DiakMegjelenit extends javax.swing.JFrame {
                 String sor = sorok.get(i);
                 Diak diak = new Diak(sor);
                 diakok.add(diak);
-                cmbNevek.addItem(String.valueOf(diak.getId()));
+                boolean vanBenne = false;
+                for (int j = 0; j < cmbNevek.getItemCount(); j++) {
+                    if(cmbNevek.getItemAt(j).equals(String.valueOf(diak.getId()))){
+                        vanBenne = true;
+                        System.out.println("Volt ismétlődés");
+                    }
+                }
+                if(!(vanBenne)){
+                    cmbNevek.addItem(diak.getId()+ "");
+                }
+                
                 
                 
             }
